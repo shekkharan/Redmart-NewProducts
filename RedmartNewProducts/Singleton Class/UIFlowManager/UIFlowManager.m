@@ -73,7 +73,7 @@ static UIFlowManager* instance;
 
 - (void)launchApp
 {
-    mainWindow.backgroundColor = WHITECOLOR;
+    mainWindow.backgroundColor = APPPRIMARYCOLOR;
     [mFlowManager loadSplash];
     [mFlowManager performSelector:@selector(loadProductsCatalogue) withObject:nil afterDelay:3.0];
 }
