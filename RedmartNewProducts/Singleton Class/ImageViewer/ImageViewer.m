@@ -18,11 +18,12 @@ static ImageViewer *instance;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgImageViewer;
 @property (weak, nonatomic) IBOutlet UIView *vwFunctions;
-@property (weak, nonatomic) IBOutlet UIButton *btnSave;
+
 
 @end
 
 @implementation ImageViewer
+@synthesize actionSheet;
 
 + (ImageViewer*) getInstance {
     @synchronized([ImageViewer class]) {
@@ -112,7 +113,7 @@ static ImageViewer *instance;
 
 - (void)showActionSheetForSavingOptions
 {
-    DoActionSheet *actionSheet = [[DoActionSheet alloc] init];
+    actionSheet = [[DoActionSheet alloc] init];
     actionSheet.nAnimationType = 2;
     [actionSheet setStyle1];
     actionSheet.dRound = 5;

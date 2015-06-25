@@ -34,8 +34,6 @@ typedef enum {
 - (void)webserviceManager:(WebServiceManager *)aManager processFailed:(WebServiceResponse *) aResponse;
 - (void)processCompleted:(WebServiceResponse *)response;
 - (void)processFailed:(WebServiceResponse *)response;
-- (void)processCompletedWithNetworkTime:(long long)networkTime;
-- (void)processCompletedUploadCSV;
 
 @end
 

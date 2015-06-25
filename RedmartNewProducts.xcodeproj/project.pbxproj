@@ -176,6 +176,31 @@
 		849696951B3A9FDC009A1E04 /* ImageViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849696931B3A9FDC009A1E04 /* ImageViewer.xib */; };
 		84AE2F791B3BA40400729E42 /* ProductDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F771B3BA40400729E42 /* ProductDetailsCell.m */; };
 		84AE2F7A1B3BA40400729E42 /* ProductDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AE2F781B3BA40400729E42 /* ProductDetailsCell.xib */; };
+		84AE2FAF1B3BF36900729E42 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84AE2F7E1B3BF36900729E42 /* InfoPlist.strings */; };
+		84AE2FB01B3BF36900729E42 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F811B3BF36900729E42 /* NSInvocation+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB11B3BF36900729E42 /* NSMethodSignature+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F831B3BF36900729E42 /* NSMethodSignature+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB21B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F851B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.m */; };
+		84AE2FB31B3BF36900729E42 /* NSObject+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F871B3BF36900729E42 /* NSObject+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB41B3BF36900729E42 /* OCClassMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F891B3BF36900729E42 /* OCClassMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB51B3BF36900729E42 /* OCMArg.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F8B1B3BF36900729E42 /* OCMArg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB61B3BF36900729E42 /* OCMBlockCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F8D1B3BF36900729E42 /* OCMBlockCaller.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB71B3BF36900729E42 /* OCMBoxedReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F8F1B3BF36900729E42 /* OCMBoxedReturnValueProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB81B3BF36900729E42 /* OCMConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F911B3BF36900729E42 /* OCMConstraint.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FB91B3BF36900729E42 /* OCMExceptionReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F931B3BF36900729E42 /* OCMExceptionReturnValueProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FBA1B3BF36900729E42 /* OCMIndirectReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F951B3BF36900729E42 /* OCMIndirectReturnValueProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FBB1B3BF36900729E42 /* OCMNotificationPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F971B3BF36900729E42 /* OCMNotificationPoster.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FBC1B3BF36900729E42 /* OCMObserverRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F991B3BF36900729E42 /* OCMObserverRecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FBD1B3BF36900729E42 /* OCMock-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84AE2F9A1B3BF36900729E42 /* OCMock-Info.plist */; };
+		84AE2FBE1B3BF36900729E42 /* OCMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2F9E1B3BF36900729E42 /* OCMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FBF1B3BF36900729E42 /* OCMockRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FA01B3BF36900729E42 /* OCMockRecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC01B3BF36900729E42 /* OCMPassByRefSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FA21B3BF36900729E42 /* OCMPassByRefSetter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC11B3BF36900729E42 /* OCMRealObjectForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FA41B3BF36900729E42 /* OCMRealObjectForwarder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC21B3BF36900729E42 /* OCMReturnValueProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FA61B3BF36900729E42 /* OCMReturnValueProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC31B3BF36900729E42 /* OCObserverMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FA81B3BF36900729E42 /* OCObserverMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC41B3BF36900729E42 /* OCPartialMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FAA1B3BF36900729E42 /* OCPartialMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC51B3BF36900729E42 /* OCPartialMockRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FAC1B3BF36900729E42 /* OCPartialMockRecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC61B3BF36900729E42 /* OCProtocolMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84AE2FC81B3C021B00729E42 /* RedmartUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FC71B3C021B00729E42 /* RedmartUITest.m */; };
 		D30795BA1B3B244A00B6D774 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */; };
 		D30795BD1B3B490E00B6D774 /* CatalogueCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795BC1B3B490E00B6D774 /* CatalogueCellLayout.m */; };
 /* End PBXBuildFile section */
@@ -191,7 +216,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8496922B1B3A6659009A1E04 /* Redmart NewProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Redmart NewProducts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8496922B1B3A6659009A1E04 /* RedmartNewProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmartNewProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8496922F1B3A6659009A1E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849692301B3A6659009A1E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		849692391B3A6659009A1E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -507,6 +532,55 @@
 		84AE2F761B3BA40400729E42 /* ProductDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsCell.h; sourceTree = "<group>"; };
 		84AE2F771B3BA40400729E42 /* ProductDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsCell.m; sourceTree = "<group>"; };
 		84AE2F781B3BA40400729E42 /* ProductDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsCell.xib; sourceTree = "<group>"; };
+		84AE2F7F1B3BF36900729E42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84AE2F801B3BF36900729E42 /* NSInvocation+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+OCMAdditions.h"; sourceTree = "<group>"; };
+		84AE2F811B3BF36900729E42 /* NSInvocation+OCMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+OCMAdditions.m"; sourceTree = "<group>"; };
+		84AE2F821B3BF36900729E42 /* NSMethodSignature+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+OCMAdditions.h"; sourceTree = "<group>"; };
+		84AE2F831B3BF36900729E42 /* NSMethodSignature+OCMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+OCMAdditions.m"; sourceTree = "<group>"; };
+		84AE2F841B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		84AE2F851B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+OCMAdditions.m"; sourceTree = "<group>"; };
+		84AE2F861B3BF36900729E42 /* NSObject+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OCMAdditions.h"; sourceTree = "<group>"; };
+		84AE2F871B3BF36900729E42 /* NSObject+OCMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OCMAdditions.m"; sourceTree = "<group>"; };
+		84AE2F881B3BF36900729E42 /* OCClassMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClassMockObject.h; sourceTree = "<group>"; };
+		84AE2F891B3BF36900729E42 /* OCClassMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClassMockObject.m; sourceTree = "<group>"; };
+		84AE2F8A1B3BF36900729E42 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		84AE2F8B1B3BF36900729E42 /* OCMArg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMArg.m; sourceTree = "<group>"; };
+		84AE2F8C1B3BF36900729E42 /* OCMBlockCaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMBlockCaller.h; sourceTree = "<group>"; };
+		84AE2F8D1B3BF36900729E42 /* OCMBlockCaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMBlockCaller.m; sourceTree = "<group>"; };
+		84AE2F8E1B3BF36900729E42 /* OCMBoxedReturnValueProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMBoxedReturnValueProvider.h; sourceTree = "<group>"; };
+		84AE2F8F1B3BF36900729E42 /* OCMBoxedReturnValueProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMBoxedReturnValueProvider.m; sourceTree = "<group>"; };
+		84AE2F901B3BF36900729E42 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		84AE2F911B3BF36900729E42 /* OCMConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMConstraint.m; sourceTree = "<group>"; };
+		84AE2F921B3BF36900729E42 /* OCMExceptionReturnValueProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMExceptionReturnValueProvider.h; sourceTree = "<group>"; };
+		84AE2F931B3BF36900729E42 /* OCMExceptionReturnValueProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMExceptionReturnValueProvider.m; sourceTree = "<group>"; };
+		84AE2F941B3BF36900729E42 /* OCMIndirectReturnValueProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMIndirectReturnValueProvider.h; sourceTree = "<group>"; };
+		84AE2F951B3BF36900729E42 /* OCMIndirectReturnValueProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMIndirectReturnValueProvider.m; sourceTree = "<group>"; };
+		84AE2F961B3BF36900729E42 /* OCMNotificationPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMNotificationPoster.h; sourceTree = "<group>"; };
+		84AE2F971B3BF36900729E42 /* OCMNotificationPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMNotificationPoster.m; sourceTree = "<group>"; };
+		84AE2F981B3BF36900729E42 /* OCMObserverRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMObserverRecorder.h; sourceTree = "<group>"; };
+		84AE2F991B3BF36900729E42 /* OCMObserverRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMObserverRecorder.m; sourceTree = "<group>"; };
+		84AE2F9A1B3BF36900729E42 /* OCMock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OCMock-Info.plist"; sourceTree = "<group>"; };
+		84AE2F9B1B3BF36900729E42 /* OCMock-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCMock-Prefix.pch"; sourceTree = "<group>"; };
+		84AE2F9C1B3BF36900729E42 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		84AE2F9D1B3BF36900729E42 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		84AE2F9E1B3BF36900729E42 /* OCMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMockObject.m; sourceTree = "<group>"; };
+		84AE2F9F1B3BF36900729E42 /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		84AE2FA01B3BF36900729E42 /* OCMockRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMockRecorder.m; sourceTree = "<group>"; };
+		84AE2FA11B3BF36900729E42 /* OCMPassByRefSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMPassByRefSetter.h; sourceTree = "<group>"; };
+		84AE2FA21B3BF36900729E42 /* OCMPassByRefSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMPassByRefSetter.m; sourceTree = "<group>"; };
+		84AE2FA31B3BF36900729E42 /* OCMRealObjectForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRealObjectForwarder.h; sourceTree = "<group>"; };
+		84AE2FA41B3BF36900729E42 /* OCMRealObjectForwarder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMRealObjectForwarder.m; sourceTree = "<group>"; };
+		84AE2FA51B3BF36900729E42 /* OCMReturnValueProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMReturnValueProvider.h; sourceTree = "<group>"; };
+		84AE2FA61B3BF36900729E42 /* OCMReturnValueProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMReturnValueProvider.m; sourceTree = "<group>"; };
+		84AE2FA71B3BF36900729E42 /* OCObserverMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCObserverMockObject.h; sourceTree = "<group>"; };
+		84AE2FA81B3BF36900729E42 /* OCObserverMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCObserverMockObject.m; sourceTree = "<group>"; };
+		84AE2FA91B3BF36900729E42 /* OCPartialMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPartialMockObject.h; sourceTree = "<group>"; };
+		84AE2FAA1B3BF36900729E42 /* OCPartialMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPartialMockObject.m; sourceTree = "<group>"; };
+		84AE2FAB1B3BF36900729E42 /* OCPartialMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCPartialMockRecorder.h; sourceTree = "<group>"; };
+		84AE2FAC1B3BF36900729E42 /* OCPartialMockRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCPartialMockRecorder.m; sourceTree = "<group>"; };
+		84AE2FAD1B3BF36900729E42 /* OCProtocolMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCProtocolMockObject.h; sourceTree = "<group>"; };
+		84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCProtocolMockObject.m; sourceTree = "<group>"; };
+		84AE2FC71B3C021B00729E42 /* RedmartUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedmartUITest.m; sourceTree = "<group>"; };
 		D30795B81B3B244A00B6D774 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
 		D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpringFlowLayout.m; sourceTree = "<group>"; };
 		D30795BB1B3B490E00B6D774 /* CatalogueCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogueCellLayout.h; sourceTree = "<group>"; };
@@ -545,7 +619,7 @@
 		8496922C1B3A6659009A1E04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8496922B1B3A6659009A1E04 /* Redmart NewProducts.app */,
+				8496922B1B3A6659009A1E04 /* RedmartNewProducts.app */,
 				849692441B3A6659009A1E04 /* RedmartNewProductsTests.xctest */,
 			);
 			name = Products;
@@ -581,6 +655,7 @@
 		849692471B3A6659009A1E04 /* RedmartNewProductsTests */ = {
 			isa = PBXGroup;
 			children = (
+				84AE2FC71B3C021B00729E42 /* RedmartUITest.m */,
 				8496924A1B3A6659009A1E04 /* RedmartNewProductsTests.m */,
 				849692481B3A6659009A1E04 /* Supporting Files */,
 			);
@@ -640,6 +715,7 @@
 		849693991B3A6C32009A1E04 /* ThirdParty Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				84AE2F7D1B3BF36900729E42 /* OCMock */,
 				D30795B41B3B20FB00B6D774 /* SpringyCollectionViewLayout */,
 				8496959F1B3A7862009A1E04 /* HUD */,
 				8496939A1B3A6C32009A1E04 /* AFNetworking */,
@@ -1490,6 +1566,61 @@
 			path = ProductDetails;
 			sourceTree = "<group>";
 		};
+		84AE2F7D1B3BF36900729E42 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				84AE2F7E1B3BF36900729E42 /* InfoPlist.strings */,
+				84AE2F801B3BF36900729E42 /* NSInvocation+OCMAdditions.h */,
+				84AE2F811B3BF36900729E42 /* NSInvocation+OCMAdditions.m */,
+				84AE2F821B3BF36900729E42 /* NSMethodSignature+OCMAdditions.h */,
+				84AE2F831B3BF36900729E42 /* NSMethodSignature+OCMAdditions.m */,
+				84AE2F841B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.h */,
+				84AE2F851B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.m */,
+				84AE2F861B3BF36900729E42 /* NSObject+OCMAdditions.h */,
+				84AE2F871B3BF36900729E42 /* NSObject+OCMAdditions.m */,
+				84AE2F881B3BF36900729E42 /* OCClassMockObject.h */,
+				84AE2F891B3BF36900729E42 /* OCClassMockObject.m */,
+				84AE2F8A1B3BF36900729E42 /* OCMArg.h */,
+				84AE2F8B1B3BF36900729E42 /* OCMArg.m */,
+				84AE2F8C1B3BF36900729E42 /* OCMBlockCaller.h */,
+				84AE2F8D1B3BF36900729E42 /* OCMBlockCaller.m */,
+				84AE2F8E1B3BF36900729E42 /* OCMBoxedReturnValueProvider.h */,
+				84AE2F8F1B3BF36900729E42 /* OCMBoxedReturnValueProvider.m */,
+				84AE2F901B3BF36900729E42 /* OCMConstraint.h */,
+				84AE2F911B3BF36900729E42 /* OCMConstraint.m */,
+				84AE2F921B3BF36900729E42 /* OCMExceptionReturnValueProvider.h */,
+				84AE2F931B3BF36900729E42 /* OCMExceptionReturnValueProvider.m */,
+				84AE2F941B3BF36900729E42 /* OCMIndirectReturnValueProvider.h */,
+				84AE2F951B3BF36900729E42 /* OCMIndirectReturnValueProvider.m */,
+				84AE2F961B3BF36900729E42 /* OCMNotificationPoster.h */,
+				84AE2F971B3BF36900729E42 /* OCMNotificationPoster.m */,
+				84AE2F981B3BF36900729E42 /* OCMObserverRecorder.h */,
+				84AE2F991B3BF36900729E42 /* OCMObserverRecorder.m */,
+				84AE2F9A1B3BF36900729E42 /* OCMock-Info.plist */,
+				84AE2F9B1B3BF36900729E42 /* OCMock-Prefix.pch */,
+				84AE2F9C1B3BF36900729E42 /* OCMock.h */,
+				84AE2F9D1B3BF36900729E42 /* OCMockObject.h */,
+				84AE2F9E1B3BF36900729E42 /* OCMockObject.m */,
+				84AE2F9F1B3BF36900729E42 /* OCMockRecorder.h */,
+				84AE2FA01B3BF36900729E42 /* OCMockRecorder.m */,
+				84AE2FA11B3BF36900729E42 /* OCMPassByRefSetter.h */,
+				84AE2FA21B3BF36900729E42 /* OCMPassByRefSetter.m */,
+				84AE2FA31B3BF36900729E42 /* OCMRealObjectForwarder.h */,
+				84AE2FA41B3BF36900729E42 /* OCMRealObjectForwarder.m */,
+				84AE2FA51B3BF36900729E42 /* OCMReturnValueProvider.h */,
+				84AE2FA61B3BF36900729E42 /* OCMReturnValueProvider.m */,
+				84AE2FA71B3BF36900729E42 /* OCObserverMockObject.h */,
+				84AE2FA81B3BF36900729E42 /* OCObserverMockObject.m */,
+				84AE2FA91B3BF36900729E42 /* OCPartialMockObject.h */,
+				84AE2FAA1B3BF36900729E42 /* OCPartialMockObject.m */,
+				84AE2FAB1B3BF36900729E42 /* OCPartialMockRecorder.h */,
+				84AE2FAC1B3BF36900729E42 /* OCPartialMockRecorder.m */,
+				84AE2FAD1B3BF36900729E42 /* OCProtocolMockObject.h */,
+				84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		D30795B41B3B20FB00B6D774 /* SpringyCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -1517,7 +1648,7 @@
 			);
 			name = RedmartNewProducts;
 			productName = RedmartNewProducts;
-			productReference = 8496922B1B3A6659009A1E04 /* Redmart NewProducts.app */;
+			productReference = 8496922B1B3A6659009A1E04 /* RedmartNewProducts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		849692431B3A6659009A1E04 /* RedmartNewProductsTests */ = {
@@ -1581,7 +1712,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AE2FBD1B3BF36900729E42 /* OCMock-Info.plist in Resources */,
 				8496923A1B3A6659009A1E04 /* Main.storyboard in Resources */,
+				84AE2FAF1B3BF36900729E42 /* InfoPlist.strings in Resources */,
 				849694DF1B3A6C35009A1E04 /* FlatDatePicker-Icon-Check.png in Resources */,
 				84AE2F7A1B3BA40400729E42 /* ProductDetailsCell.xib in Resources */,
 				8496923F1B3A6659009A1E04 /* LaunchScreen.xib in Resources */,
@@ -1640,14 +1773,18 @@
 				849696241B3A8F75009A1E04 /* UIView+RoundEdge.m in Sources */,
 				849695331B3A6C35009A1E04 /* IISideController.m in Sources */,
 				849694CC1B3A6C35009A1E04 /* RNBlurModalView.m in Sources */,
+				84AE2FB21B3BF36900729E42 /* NSNotificationCenter+OCMAdditions.m in Sources */,
+				84AE2FBB1B3BF36900729E42 /* OCMNotificationPoster.m in Sources */,
 				849695A51B3A7862009A1E04 /* SpotifyProgressHUD.m in Sources */,
 				849695161B3A6C35009A1E04 /* UIImage+GIF.m in Sources */,
 				849694C51B3A6C35009A1E04 /* Reachability.m in Sources */,
 				8496961C1B3A8F75009A1E04 /* UIDevice+Machine.m in Sources */,
 				8496959E1B3A775E009A1E04 /* PendingOperations.m in Sources */,
 				849694DB1B3A6C35009A1E04 /* UIImage+ResizeMagick.m in Sources */,
+				84AE2FB31B3BF36900729E42 /* NSObject+OCMAdditions.m in Sources */,
 				849696171B3A8F75009A1E04 /* NSObject+CheckNull.m in Sources */,
 				849696131B3A8F75009A1E04 /* NSDate+Helper.m in Sources */,
+				84AE2FC11B3BF36900729E42 /* OCMRealObjectForwarder.m in Sources */,
 				849695BD1B3A83DA009A1E04 /* ProductDetailsVC.m in Sources */,
 				8496957B1B3A75C0009A1E04 /* DataManager.m in Sources */,
 				849696201B3A8F75009A1E04 /* UINavigationBar+CustomImage.m in Sources */,
@@ -1664,6 +1801,7 @@
 				8496950B1B3A6C35009A1E04 /* UIImage+ImageEffects.m in Sources */,
 				8496950E1B3A6C35009A1E04 /* SDImageCache.m in Sources */,
 				849694CA1B3A6C35009A1E04 /* ASPopUpView.m in Sources */,
+				84AE2FB51B3BF36900729E42 /* OCMArg.m in Sources */,
 				849694F61B3A6C35009A1E04 /* IQBarButtonItem.m in Sources */,
 				849693321B3A6C0C009A1E04 /* AppDelegate.m in Sources */,
 				849694FD1B3A6C35009A1E04 /* MBProgressHUD.m in Sources */,
@@ -1684,6 +1822,8 @@
 				849694ED1B3A6C35009A1E04 /* HMSegmentedControl.m in Sources */,
 				849695111B3A6C35009A1E04 /* SDWebImageDownloader.m in Sources */,
 				849695301B3A6C35009A1E04 /* UIImageView+AFNetworking.m in Sources */,
+				84AE2FC01B3BF36900729E42 /* OCMPassByRefSetter.m in Sources */,
+				84AE2FB11B3BF36900729E42 /* NSMethodSignature+OCMAdditions.m in Sources */,
 				849695341B3A6C35009A1E04 /* IIViewDeckController.m in Sources */,
 				849696121B3A8F75009A1E04 /* NSArray+Search.m in Sources */,
 				849696231B3A8F75009A1E04 /* UIView+Border.m in Sources */,
@@ -1694,30 +1834,38 @@
 				8496961F1B3A8F75009A1E04 /* UILabel+DynamicResize.m in Sources */,
 				849694EE1B3A6C35009A1E04 /* iCarousel.m in Sources */,
 				849694CE1B3A6C35009A1E04 /* CountLabel.m in Sources */,
+				84AE2FBA1B3BF36900729E42 /* OCMIndirectReturnValueProvider.m in Sources */,
 				8496961E1B3A8F75009A1E04 /* UIImage+UISegmentIconAndText.m in Sources */,
 				849694CD1B3A6C35009A1E04 /* NZCircularImageView.m in Sources */,
 				849694C41B3A6C35009A1E04 /* AFURLSessionManager.m in Sources */,
 				849696831B3A903D009A1E04 /* Product.m in Sources */,
 				849695B01B3A7AC5009A1E04 /* WebServiceRequest.m in Sources */,
 				849695181B3A6C35009A1E04 /* UIImage+WebP.m in Sources */,
+				84AE2FC41B3BF36900729E42 /* OCPartialMockObject.m in Sources */,
 				849694EF1B3A6C35009A1E04 /* IQNSArray+Sort.m in Sources */,
 				849694BF1B3A6C35009A1E04 /* AFNetworkReachabilityManager.m in Sources */,
 				8496951B1B3A6C35009A1E04 /* JASidePanelController.m in Sources */,
 				849695051B3A6C35009A1E04 /* PullableView.m in Sources */,
+				84AE2FB41B3BF36900729E42 /* OCClassMockObject.m in Sources */,
 				849695361B3A6C35009A1E04 /* YLProgressBar.m in Sources */,
 				8496961D1B3A8F75009A1E04 /* UIImage+Rescale.m in Sources */,
 				849695791B3A75C0009A1E04 /* AlertViewManager.m in Sources */,
 				849695041B3A6C35009A1E04 /* UIPlaceholderTextView.m in Sources */,
+				84AE2FBF1B3BF36900729E42 /* OCMockRecorder.m in Sources */,
 				849696211B3A8F75009A1E04 /* UITextField+additionalTag.m in Sources */,
+				84AE2FBE1B3BF36900729E42 /* OCMockObject.m in Sources */,
 				849694F51B3A6C35009A1E04 /* IQTextView.m in Sources */,
 				849695151B3A6C35009A1E04 /* UIButton+WebCache.m in Sources */,
 				849695311B3A6C35009A1E04 /* UIProgressView+AFNetworking.m in Sources */,
+				84AE2FC31B3BF36900729E42 /* OCObserverMockObject.m in Sources */,
 				849694F41B3A6C35009A1E04 /* IQSegmentedNextPrevious.m in Sources */,
 				849694F91B3A6C35009A1E04 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				849695A41B3A7862009A1E04 /* GiFHUD.m in Sources */,
 				849695BB1B3A83DA009A1E04 /* ProductsCatalogueVC.m in Sources */,
+				84AE2FB61B3BF36900729E42 /* OCMBlockCaller.m in Sources */,
 				849696111B3A8F75009A1E04 /* EDLabel.m in Sources */,
 				849695B31B3A7AC5009A1E04 /* WebServiceManager.m in Sources */,
+				84AE2FC61B3BF36900729E42 /* OCProtocolMockObject.m in Sources */,
 				849696151B3A8F75009A1E04 /* NSDateFormatter+Additions.m in Sources */,
 				D30795BD1B3B490E00B6D774 /* CatalogueCellLayout.m in Sources */,
 				849693821B3A6C0C009A1E04 /* PlaceholderView.m in Sources */,
@@ -1737,6 +1885,8 @@
 				849696221B3A8F75009A1E04 /* UITextField+Extended.m in Sources */,
 				849695241B3A6C35009A1E04 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				849694C11B3A6C35009A1E04 /* AFURLConnectionOperation.m in Sources */,
+				84AE2FC51B3BF36900729E42 /* OCPartialMockRecorder.m in Sources */,
+				84AE2FB81B3BF36900729E42 /* OCMConstraint.m in Sources */,
 				8496952B1B3A6C35009A1E04 /* TextFieldValidator.m in Sources */,
 				849694F01B3A6C35009A1E04 /* IQUIView+Hierarchy.m in Sources */,
 				8496959B1B3A775E009A1E04 /* FileManager.m in Sources */,
@@ -1753,20 +1903,25 @@
 				849696141B3A8F75009A1E04 /* NSDateComponents+DateDifference.m in Sources */,
 				8496952E1B3A6C35009A1E04 /* UIAlertView+AFNetworking.m in Sources */,
 				8496951D1B3A6C35009A1E04 /* CBZSplashView.m in Sources */,
+				84AE2FB91B3BF36900729E42 /* OCMExceptionReturnValueProvider.m in Sources */,
 				849694DA1B3A6C35009A1E04 /* README.md in Sources */,
 				8496968E1B3A9944009A1E04 /* SplashScreenVC.m in Sources */,
+				84AE2FB71B3BF36900729E42 /* OCMBoxedReturnValueProvider.m in Sources */,
 				8496950F1B3A6C35009A1E04 /* SDWebImageCompat.m in Sources */,
 				849694F21B3A6C35009A1E04 /* IQKeyboardManager.m in Sources */,
 				849694BC1B3A6C35009A1E04 /* AFHTTPRequestOperation.m in Sources */,
 				8496951A1B3A6C35009A1E04 /* UIImageView+WebCache.m in Sources */,
+				84AE2FC21B3BF36900729E42 /* OCMReturnValueProvider.m in Sources */,
 				D30795BA1B3B244A00B6D774 /* TLSpringFlowLayout.m in Sources */,
 				849695351B3A6C35009A1E04 /* IIWrapController.m in Sources */,
+				84AE2FB01B3BF36900729E42 /* NSInvocation+OCMAdditions.m in Sources */,
 				849694BD1B3A6C35009A1E04 /* AFHTTPRequestOperationManager.m in Sources */,
 				849695061B3A6C35009A1E04 /* RSDotsView.swift in Sources */,
 				849695101B3A6C35009A1E04 /* SDWebImageDecoder.m in Sources */,
 				849695321B3A6C35009A1E04 /* UIWebView+AFNetworking.m in Sources */,
 				849696191B3A8F75009A1E04 /* UIButton+Extensions.m in Sources */,
 				8496935B1B3A6C0C009A1E04 /* BaseVC.m in Sources */,
+				84AE2FBC1B3BF36900729E42 /* OCMObserverRecorder.m in Sources */,
 				849695081B3A6C35009A1E04 /* SCLAlertViewResponder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1776,6 +1931,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8496924B1B3A6659009A1E04 /* RedmartNewProductsTests.m in Sources */,
+				84AE2FC81B3C021B00729E42 /* RedmartUITest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1804,6 +1960,14 @@
 				8496923E1B3A6659009A1E04 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		84AE2F7E1B3BF36900729E42 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84AE2F7F1B3BF36900729E42 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1845,9 +2009,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = RedmartNewProducts;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1882,8 +2047,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RedmartNewProducts;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1897,7 +2063,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RedmartNewProducts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Redmart NewProducts";
+				PRODUCT_NAME = RedmartNewProducts;
 			};
 			name = Debug;
 		};
@@ -1909,7 +2075,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RedmartNewProducts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Redmart NewProducts";
+				PRODUCT_NAME = RedmartNewProducts;
 			};
 			name = Release;
 		};
@@ -1927,7 +2093,7 @@
 				);
 				INFOPLIST_FILE = RedmartNewProductsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RedmartNewProductsTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmartNewProducts.app/RedmartNewProducts";
 			};
 			name = Debug;
@@ -1942,7 +2108,7 @@
 				);
 				INFOPLIST_FILE = RedmartNewProductsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RedmartNewProductsTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedmartNewProducts.app/RedmartNewProducts";
 			};
 			name = Release;
