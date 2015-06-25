@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreenVC">
+            <connections>
+                <outlet property="imgBG" destination="pZV-8X-pbc" id="RqN-GW-sev"/>
+                <outlet property="imgMart" destination="bgF-xK-m9A" id="G8C-Rd-5Av"/>
+                <outlet property="imgRed" destination="e3F-eI-Kw6" id="iIC-Ct-LMX"/>
+                <outlet property="imgTrademark" destination="H5Q-gf-3i8" id="Fut-wu-IMW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redmartbg" translatesAutoresizingMaskIntoConstraints="NO" id="pZV-8X-pbc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="e3F-eI-Kw6">
+                    <rect key="frame" x="65" y="242" width="81" height="47"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trademark" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-gf-3i8">
+                    <rect key="frame" x="255" y="230" width="21" height="18"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7l-TY-Ne4">
+                    <rect key="frame" x="85" y="382" width="150" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mart" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-xK-m9A">
+                    <rect key="frame" x="137" y="241" width="119" height="53"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="314" y="322"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mart" width="367" height="135"/>
+        <image name="red" width="235" height="125"/>
+        <image name="redmartbg" width="250" height="444"/>
+        <image name="trademark" width="69" height="46"/>
+    </resources>
+</document>

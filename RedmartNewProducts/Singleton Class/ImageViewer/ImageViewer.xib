@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewer">
+            <connections>
+                <outlet property="btnSave" destination="0Sp-FH-pX2" id="2tZ-P7-UMc"/>
+                <outlet property="imgImageViewer" destination="xcx-Hh-tZL" id="b3k-oD-ER4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwFunctions" destination="Qtk-Ej-7V7" id="R4Z-qU-jj7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bd6-C5-086">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="Kno-W2-3XD"/>
+                        <constraint firstAttribute="height" constant="568" id="jRB-Bl-gIa"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xcx-Hh-tZL">
+                    <rect key="frame" x="10" y="100" width="300" height="400"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="Ej5-dp-O3H"/>
+                        <constraint firstAttribute="height" constant="400" id="Pqv-91-pIY"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qtk-Ej-7V7">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-FH-pX2">
+                            <rect key="frame" x="15" y="8" width="28" height="28"/>
+                            <state key="normal" image="save">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnSaveClicked:" destination="-1" eventType="touchUpInside" id="bUn-ji-53I"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.89000000000000001" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Nj8-32-GgF"/>
+                        <constraint firstAttribute="width" constant="320" id="UlR-md-Y50"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="xcx-Hh-tZL" secondAttribute="centerX" id="3WN-Zy-9Xw"/>
+                <constraint firstAttribute="bottom" secondItem="Qtk-Ej-7V7" secondAttribute="bottom" id="YY1-Qo-FJF"/>
+                <constraint firstAttribute="centerX" secondItem="Bd6-C5-086" secondAttribute="centerX" id="bXI-8Q-OYz"/>
+                <constraint firstItem="Qtk-Ej-7V7" firstAttribute="top" secondItem="xcx-Hh-tZL" secondAttribute="bottom" constant="24" id="ntf-q0-taA"/>
+                <constraint firstAttribute="centerX" secondItem="Qtk-Ej-7V7" secondAttribute="centerX" id="wIn-9q-Ifd"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-48" y="346"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="save" width="42" height="42"/>
+    </resources>
+</document>
