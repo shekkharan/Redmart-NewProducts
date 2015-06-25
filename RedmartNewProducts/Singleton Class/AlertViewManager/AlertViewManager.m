@@ -100,7 +100,7 @@ static AlertViewManager *instance;
        [self setIsAlertViewActive:NO];
        if (compBlock)compBlock(YES);
     };
-    //[alert showError:CURRENT_VIEWCONTROLLER title:LOCALIZATION(C_NETWORK_ERROR) subTitle:message closeButtonTitle:LOCALIZATION(C_REG_BTN_OK) duration:0.0f];
+    [alert showError:CURRENT_VIEWCONTROLLER title:@"Network Error" subTitle:message closeButtonTitle:@"Ok" duration:0.0f];
     [self setIsAlertViewActive:YES];
 }
 
@@ -110,7 +110,7 @@ static AlertViewManager *instance;
     
     alert.soundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/right_answer.mp3", [[NSBundle mainBundle] resourcePath]]];
     
-    //[alert showError:CURRENT_VIEWCONTROLLER title:LOCALIZATION(C_REG_MSG_ERROR) subTitle:message closeButtonTitle:LOCALIZATION(C_REG_BTN_OK) duration:0.0f];
+    [alert showError:CURRENT_VIEWCONTROLLER title:@"Error" subTitle:message closeButtonTitle:@"Ok" duration:0.0f];
 }
 
 - (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message
