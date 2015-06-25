@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -92,27 +93,25 @@
                                     <constraint firstAttribute="height" constant="143" id="ut8-CO-efG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ow-c6-oXj" userLabel="Overlay">
-                                <rect key="frame" x="6" y="125" width="27" height="18"/>
-                                <color key="backgroundColor" red="0.25098039215686274" green="0.70588235294117652" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="SUf-8j-AOd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cbo-0o-5xS" firstAttribute="top" secondItem="8A0-dT-PJ2" secondAttribute="top" constant="7" id="AOf-GI-Cpi"/>
-                            <constraint firstAttribute="bottom" secondItem="9ow-c6-oXj" secondAttribute="bottom" constant="14" id="ENW-JN-ARp"/>
-                            <constraint firstItem="9ow-c6-oXj" firstAttribute="leading" secondItem="8A0-dT-PJ2" secondAttribute="leading" constant="6" id="aub-dZ-iyo"/>
                             <constraint firstAttribute="bottom" secondItem="cbo-0o-5xS" secondAttribute="bottom" constant="7" id="i3m-yA-RWu"/>
                             <constraint firstItem="cbo-0o-5xS" firstAttribute="leading" secondItem="8A0-dT-PJ2" secondAttribute="leading" constant="4" id="oed-c7-MwV"/>
                             <constraint firstAttribute="trailing" secondItem="cbo-0o-5xS" secondAttribute="trailing" constant="5" id="s9d-eR-GFP"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ow-c6-oXj" userLabel="Overlay">
+                        <rect key="frame" x="8" y="120" width="27" height="18"/>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.70588235294117652" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="SUf-8j-AOd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
@@ -124,9 +123,11 @@
                 <constraint firstItem="Ivs-Xp-QgH" firstAttribute="leading" secondItem="z0O-rv-bJm" secondAttribute="leading" id="ATT-g5-63H"/>
                 <constraint firstItem="8A0-dT-PJ2" firstAttribute="top" secondItem="z0O-rv-bJm" secondAttribute="top" id="AhJ-P9-Nvs"/>
                 <constraint firstItem="Ivs-Xp-QgH" firstAttribute="top" secondItem="8A0-dT-PJ2" secondAttribute="bottom" id="Fsy-o2-3ne"/>
+                <constraint firstItem="9ow-c6-oXj" firstAttribute="leading" secondItem="z0O-rv-bJm" secondAttribute="leading" constant="8" id="HBz-v1-d77"/>
                 <constraint firstAttribute="bottom" secondItem="Ivs-Xp-QgH" secondAttribute="bottom" id="JQl-pQ-AXS"/>
                 <constraint firstAttribute="trailing" secondItem="Ivs-Xp-QgH" secondAttribute="trailing" id="Lgx-5D-bVg"/>
                 <constraint firstItem="Ivs-Xp-QgH" firstAttribute="top" secondItem="8A0-dT-PJ2" secondAttribute="bottom" id="Mq0-1m-y7w"/>
+                <constraint firstItem="9ow-c6-oXj" firstAttribute="top" secondItem="z0O-rv-bJm" secondAttribute="top" constant="120" id="UPI-9P-Vuo"/>
                 <constraint firstAttribute="trailing" secondItem="Ivs-Xp-QgH" secondAttribute="trailing" id="WOp-hl-Y6M"/>
                 <constraint firstItem="8A0-dT-PJ2" firstAttribute="trailing" secondItem="Ivs-Xp-QgH" secondAttribute="trailing" id="X85-5k-LJp"/>
                 <constraint firstItem="8A0-dT-PJ2" firstAttribute="leading" secondItem="z0O-rv-bJm" secondAttribute="leading" id="ZHA-gW-UNH"/>

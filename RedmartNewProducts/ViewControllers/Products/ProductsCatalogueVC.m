@@ -35,21 +35,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    nextPageToBeloaded = 0;
+    
     [self setUpInterface];
-    [self getDisplayInfo];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    nextPageToBeloaded = 0;
+    [self getDisplayInfo];
     self.title = @"New";
-    [Helper hideAllSubviewsinView:self.view];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [Helper showViewWithAnimation:self.cvProducts withDuration:0.4];
     if ([self.items count] == 0) {
         self.lblPlaceholder.hidden = NO;
         [Helper showAnimationOnView:self.lblPlaceholder withDuration:0.4];
@@ -59,6 +58,7 @@
                                              selector:@selector(contentSizeCategoryChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
+      [self animateVisibleCells];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -68,6 +68,7 @@
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
 }
+
 
 #pragma mark - Implementation
 
@@ -126,6 +127,9 @@
     
     [self.cvProducts setContentSize:CGSizeMake(self.cvProducts.bounds.size.width, self.cvProducts.bounds.size.height)];
     _sizingCell = [[[UINib nibWithNibName:@"CatalogueCell" bundle:nil]instantiateWithOwner:nil options:nil] objectAtIndex:0];
+    
+    [self.cvProducts selectItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+    //[self prepareVisibleCellsForAnimation];
 }
 
 - (void)getProductsCatalogue:(ListQueryParameters *)parameters
@@ -140,11 +144,36 @@
     CGFloat bottomInset = scrollView.contentInset.bottom;
     CGFloat bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height - bottomInset;
     NSLog(@"%f",scrollView.contentSize.height);
-    if (bottomEdge == scrollView.contentSize.height) {
+    if (bottomEdge == scrollView.contentSize.height || ([self.cvProducts.visibleCells count] < 4)) {
         [UpdateHUD addMBProgress:self.view withText:@"Loading.."];
         if (lastQueryHadData) {
             [self getProductsCatalogue:[self getListQueryParameters]];
         }
+    }
+}
+
+#pragma mark - Animation of cells
+
+- (void)animateVisibleCells {
+    for (int i = 0; i < [self.cvProducts.visibleCells count]; i++) {
+        CatalogueCell * cell = (CatalogueCell *) [self.cvProducts cellForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
+        if (i%2) {
+            cell.frame = CGRectMake(cell.frame.origin.x + cell.frame.size.width + self.view.frame.size.width, cell.frame.origin.y, CGRectGetWidth(cell.bounds), CGRectGetHeight(cell.bounds));
+        }
+        else cell.frame = CGRectMake(cell.frame.origin.x - self.view.frame.size.width, cell.frame.origin.y, CGRectGetWidth(cell.bounds), CGRectGetHeight(cell.bounds));
+        cell.alpha = 0.f;
+        
+        [UIView animateWithDuration:0.25f
+                              delay:i * 0.1
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             cell.alpha = 1.f;
+                             if (i%2) {
+                                 cell.frame = CGRectMake(cell.frame.origin.x - self.view.frame.size.width - cell.frame.size.width , cell.frame.origin.y, CGRectGetWidth(cell.bounds), CGRectGetHeight(cell.bounds));
+                             }
+                             else cell.frame = CGRectMake(self.view.frame.size.width + cell.frame.origin.x, cell.frame.origin.y, CGRectGetWidth(cell.bounds), CGRectGetHeight(cell.bounds));
+                         }
+                         completion:nil];
     }
 }
 
@@ -173,7 +202,7 @@
     cell.lblPrice.text = product.price;
   
     if (product.isNew == kYes) {
-        cell.lblOverlay.text = @"  NEW  ";
+        cell.lblOverlay.text = @"   NEW   ";
         cell.lblOverlay.backgroundColor = ORANGECOLOR;
     }
     
@@ -219,7 +248,8 @@
     _sizingCell.lblItemName.text = product.name;
     _sizingCell.lblQuantity.text = product.quantity;
     _sizingCell.lblPrice.text = product.price;
-
+    [_sizingCell setNeedsUpdateConstraints];
+    [_sizingCell updateConstraintsIfNeeded];
     CGSize size = CGSizeMake(targetWidth, 0);
     return [_sizingCell.contentView systemLayoutSizeFittingSize:size];
 }

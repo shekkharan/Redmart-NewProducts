@@ -120,7 +120,7 @@
             cell.pcImages.currentPage = cell.carImages.currentItemIndex;
             [cell.carImages reloadData];
             if (self.product.isNew == kYes) {
-                cell.lblOverLay.text = @"  NEW  ";
+                cell.lblOverLay.text = @"   NEW   ";
                 cell.lblOverLay.backgroundColor = ORANGECOLOR;
             }
             
@@ -262,7 +262,6 @@
                 [self.navigationController popViewControllerAnimated:YES];
             }];
         }
-        
     }
 }
 
