@@ -35,15 +35,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self setUpInterface];
+    nextPageToBeloaded = 0;
+    [self getDisplayInfo];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    nextPageToBeloaded = 0;
-    [self getDisplayInfo];
+   
     self.title = @"New";
 }
 
