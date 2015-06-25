@@ -169,7 +169,6 @@
 		849696221B3A8F75009A1E04 /* UITextField+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496960B1B3A8F75009A1E04 /* UITextField+Extended.m */; };
 		849696231B3A8F75009A1E04 /* UIView+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496960D1B3A8F75009A1E04 /* UIView+Border.m */; };
 		849696241B3A8F75009A1E04 /* UIView+RoundEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496960F1B3A8F75009A1E04 /* UIView+RoundEdge.m */; };
-		849696831B3A903D009A1E04 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496965F1B3A903D009A1E04 /* Product.m */; };
 		8496968E1B3A9944009A1E04 /* SplashScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496968C1B3A9944009A1E04 /* SplashScreenVC.m */; };
 		8496968F1B3A9944009A1E04 /* SplashScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496968D1B3A9944009A1E04 /* SplashScreenVC.xib */; };
 		849696941B3A9FDC009A1E04 /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 849696921B3A9FDC009A1E04 /* ImageViewer.m */; };
@@ -201,6 +200,7 @@
 		84AE2FC51B3BF36900729E42 /* OCPartialMockRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FAC1B3BF36900729E42 /* OCPartialMockRecorder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84AE2FC61B3BF36900729E42 /* OCProtocolMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84AE2FC81B3C021B00729E42 /* RedmartUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FC71B3C021B00729E42 /* RedmartUITest.m */; };
+		84AE2FCC1B3C0C1500729E42 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FCB1B3C0C1500729E42 /* Product.m */; };
 		D30795BA1B3B244A00B6D774 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */; };
 		D30795BD1B3B490E00B6D774 /* CatalogueCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795BC1B3B490E00B6D774 /* CatalogueCellLayout.m */; };
 /* End PBXBuildFile section */
@@ -521,8 +521,6 @@
 		8496960D1B3A8F75009A1E04 /* UIView+Border.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Border.m"; sourceTree = "<group>"; };
 		8496960E1B3A8F75009A1E04 /* UIView+RoundEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundEdge.h"; sourceTree = "<group>"; };
 		8496960F1B3A8F75009A1E04 /* UIView+RoundEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundEdge.m"; sourceTree = "<group>"; };
-		8496965E1B3A903D009A1E04 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
-		8496965F1B3A903D009A1E04 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		8496968B1B3A9944009A1E04 /* SplashScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenVC.h; sourceTree = "<group>"; };
 		8496968C1B3A9944009A1E04 /* SplashScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenVC.m; sourceTree = "<group>"; };
 		8496968D1B3A9944009A1E04 /* SplashScreenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenVC.xib; sourceTree = "<group>"; };
@@ -581,6 +579,8 @@
 		84AE2FAD1B3BF36900729E42 /* OCProtocolMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCProtocolMockObject.h; sourceTree = "<group>"; };
 		84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCProtocolMockObject.m; sourceTree = "<group>"; };
 		84AE2FC71B3C021B00729E42 /* RedmartUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedmartUITest.m; sourceTree = "<group>"; };
+		84AE2FCA1B3C0C1500729E42 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		84AE2FCB1B3C0C1500729E42 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		D30795B81B3B244A00B6D774 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
 		D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpringFlowLayout.m; sourceTree = "<group>"; };
 		D30795BB1B3B490E00B6D774 /* CatalogueCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogueCellLayout.h; sourceTree = "<group>"; };
@@ -1514,18 +1514,9 @@
 		849696251B3A903C009A1E04 /* Model Class */ = {
 			isa = PBXGroup;
 			children = (
-				8496965D1B3A903D009A1E04 /* Rewards */,
+				84AE2FC91B3C0C1500729E42 /* Product */,
 			);
 			path = "Model Class";
-			sourceTree = "<group>";
-		};
-		8496965D1B3A903D009A1E04 /* Rewards */ = {
-			isa = PBXGroup;
-			children = (
-				8496965E1B3A903D009A1E04 /* Product.h */,
-				8496965F1B3A903D009A1E04 /* Product.m */,
-			);
-			path = Rewards;
 			sourceTree = "<group>";
 		};
 		8496968A1B3A9944009A1E04 /* SplashScreen */ = {
@@ -1619,6 +1610,15 @@
 				84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */,
 			);
 			path = OCMock;
+			sourceTree = "<group>";
+		};
+		84AE2FC91B3C0C1500729E42 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				84AE2FCA1B3C0C1500729E42 /* Product.h */,
+				84AE2FCB1B3C0C1500729E42 /* Product.m */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		D30795B41B3B20FB00B6D774 /* SpringyCollectionViewLayout */ = {
@@ -1838,7 +1838,6 @@
 				8496961E1B3A8F75009A1E04 /* UIImage+UISegmentIconAndText.m in Sources */,
 				849694CD1B3A6C35009A1E04 /* NZCircularImageView.m in Sources */,
 				849694C41B3A6C35009A1E04 /* AFURLSessionManager.m in Sources */,
-				849696831B3A903D009A1E04 /* Product.m in Sources */,
 				849695B01B3A7AC5009A1E04 /* WebServiceRequest.m in Sources */,
 				849695181B3A6C35009A1E04 /* UIImage+WebP.m in Sources */,
 				84AE2FC41B3BF36900729E42 /* OCPartialMockObject.m in Sources */,
@@ -1855,6 +1854,7 @@
 				849696211B3A8F75009A1E04 /* UITextField+additionalTag.m in Sources */,
 				84AE2FBE1B3BF36900729E42 /* OCMockObject.m in Sources */,
 				849694F51B3A6C35009A1E04 /* IQTextView.m in Sources */,
+				84AE2FCC1B3C0C1500729E42 /* Product.m in Sources */,
 				849695151B3A6C35009A1E04 /* UIButton+WebCache.m in Sources */,
 				849695311B3A6C35009A1E04 /* UIProgressView+AFNetworking.m in Sources */,
 				84AE2FC31B3BF36900729E42 /* OCObserverMockObject.m in Sources */,
