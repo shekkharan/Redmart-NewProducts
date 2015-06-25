@@ -100,6 +100,7 @@
 - (void)getDisplayInfo
 {
     self.items = [NSMutableArray array];
+    //show first page Cached data while loading new data
     if ([mDataManager loadFirstPageofProducts]) {
         self.items = (NSMutableArray *)[mDataManager loadFirstPageofProducts];
     }
@@ -241,6 +242,11 @@
     {
         if (!response.errorInResponse) {
             NSArray *productsList = [response getProductsList];
+            if (nextPageToBeloaded == 0) {
+                [mDataManager saveFirstPageofProducts:productsList];
+                //Remove first page Cached data
+                self.items = [NSMutableArray array];
+            }
             if ([productsList count] > 0) {
                 for (NSDictionary *dict in productsList) {
                     NSLOG(dict);
@@ -248,9 +254,7 @@
                     [self.items addObject:product];
                 }
                 
-                if (nextPageToBeloaded == 0) {
-                    [mDataManager saveFirstPageofProducts:productsList];
-                }
+               
                 nextPageToBeloaded ++;
                 lastQueryHadData = YES;
             }
