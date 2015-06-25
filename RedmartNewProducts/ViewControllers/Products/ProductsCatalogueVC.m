@@ -130,6 +130,7 @@
 - (void)getProductsCatalogue:(ListQueryParameters *)parameters
 {
     [[WebServiceManager sharedInstance] getNewProductsListWithParameters:parameters onView:nil withDelegate:self];
+    
 }
 
 #pragma mark - ScrollView Delegate
@@ -139,6 +140,7 @@
     CGFloat bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height - bottomInset;
     NSLog(@"%f",scrollView.contentSize.height);
     if (bottomEdge == scrollView.contentSize.height) {
+        [UpdateHUD addMBProgress:self.view withText:@"Loading.."];
         if (lastQueryHadData) {
             [self getProductsCatalogue:[self getListQueryParameters]];
         }
@@ -234,6 +236,7 @@
 
 - (void)processCompleted:(WebServiceResponse *)response
 {
+    [UpdateHUD removeMBProgress:self.view];
     if (response.webserviceCall == kGETNEWPRODUCTSLIST)
     {
         if (!response.errorInResponse) {
@@ -265,6 +268,7 @@
 
 - (void)processFailed:(WebServiceResponse *)response
 {
+    [UpdateHUD removeMBProgress:self.view];
     [mAlert showNetworkErrorAlert:[response getNetworkFailureMsg] onCompletion:^(BOOL completion){
         [self.navigationController popViewControllerAnimated:YES];
     }];

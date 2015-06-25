@@ -163,10 +163,18 @@ static WebServiceManager *webServiceManagerInstance;
     else if (request.requestMethod == GET)
     {
         [manager GET:request.requestURL parameters:request.requestParams success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            if (request.vwHUD != nil) {
+                [UpdateHUD removeSpotifyHUD:request.vwHUD];
+                
+            }
             [self successRequest:responseObject request:request withServiceIndentifier:[NSNumber numberWithInt:request.webserviceCall]];
             }
              failure:^(AFHTTPRequestOperation *operation, NSError *error)
             {
+                if (request.vwHUD != nil) {
+                    [UpdateHUD removeSpotifyHUD:request.vwHUD];
+                    
+                }
                 [self failedRequest:error request:request withServiceIndentifier:[NSNumber numberWithInt:request.webserviceCall]];
             }];
     }
