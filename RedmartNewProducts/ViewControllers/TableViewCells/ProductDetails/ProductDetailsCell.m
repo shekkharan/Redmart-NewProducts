@@ -67,8 +67,11 @@
     img.contentMode = UIViewContentModeScaleAspectFit;
     img.center = vwCarousel.center;
     [vwCarousel addSubview:img];
-    if (index == 0) {
+    
+    
+    if (index == carousel.currentItemIndex) {
         self.superVC.imgView = img;
+        [self.superVC.imagesArray replaceObjectAtIndex:index withObject:img.image];
     }
     
     return vwCarousel;
@@ -81,15 +84,15 @@
 
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
-    if ([self.delegate respondsToSelector:@selector(showImageViewerWithImageURL:)]) {
-        [self.delegate showImageViewerWithImageURL:[self.product.detailsImages objectAtIndex:index]];
+    if ([self.delegate respondsToSelector:@selector(showImageViewerWithImageURL: andIndex:)]) {
+        [self.delegate showImageViewerWithImageURL:[self.product.detailsImages objectAtIndex:index] andIndex:index];
     }
    
 }
 
 - (NSUInteger)numberOfVisibleItemsInCarousel:(iCarousel *)carousel
 {
-    return 2;
+    return 5;
 }
 
 - (NSUInteger)numberOfPlaceholdersInCarousel:(iCarousel *)carousel
@@ -105,6 +108,10 @@
 - (void)carouselCurrentItemIndexUpdated:(iCarousel *)carousel
 {
     self.pcImages.currentPage = self.carImages.currentItemIndex;
+    if ([self.delegate respondsToSelector:@selector(updateImageatIndex:)]) {
+        [self.delegate updateImageatIndex:self.carImages.currentItemIndex];
+    }
+    
 }
 
 - (void)flipCarousel

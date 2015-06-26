@@ -14,7 +14,8 @@
 
 @protocol ProductDetailsCellDelegate <NSObject>
 
-- (void)showImageViewerWithImageURL:(NSString *)url;
+- (void)showImageViewerWithImageURL:(NSString *)url andIndex:(NSInteger)index;
+- (void)updateImageatIndex:(NSInteger)index;
 
 @end
 

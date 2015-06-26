@@ -23,7 +23,8 @@
     // Get a snapshot of the thing cell we're transitioning from
    // CatalogueCell *cell = (CatalogueCell*)[fromViewController.cvProducts cellForItemAtIndexPath:[[fromViewController.cvProducts indexPathsForSelectedItems] firstObject]];
     UIView *cellImageSnapshot = [fromViewController.imgView snapshotViewAfterScreenUpdates:NO];
-    cellImageSnapshot.frame = [containerView convertRect:fromViewController.imgView.frame fromView:fromViewController.imgView.superview];
+    NSLOGFRAME(fromViewController.imgView);
+    cellImageSnapshot.frame = [containerView convertRect:fromViewController.imgView.frame fromView:fromViewController.view];
     fromViewController.imgView.hidden = YES;
     
     // Setup the initial view states

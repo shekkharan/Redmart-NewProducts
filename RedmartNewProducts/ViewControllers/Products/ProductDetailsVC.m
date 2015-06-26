@@ -34,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initializeImageArray];
     [self setUpInterface];
     [self getDisplayInfo];
 }
@@ -85,6 +86,14 @@
 - (void)contentSizeCategoryChanged:(NSNotification *)notification
 {
     [self.table reloadData];
+}
+
+- (void)initializeImageArray
+{
+    self.imagesArray = [NSMutableArray array];
+    for (id object in self.product.detailsImages) {
+        [self.imagesArray addObject:BLANK];
+    }
 }
 
 - (void)getDisplayInfo
@@ -256,15 +265,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark WebServiceManager delegate methods
+#pragma mark Cell delegate methods
 
-- (void)showImageViewerWithImageURL:(NSString *)url
+- (void)showImageViewerWithImageURL:(NSString *)url andIndex:(NSInteger)index
 {
     ImageViewer *imgviewer = [[ImageViewer alloc]init];
     imgviewer.url = url;
     imgviewer.yOrigin = self.imgView.frame.origin.y;
+    
     self.navigationController.delegate = self;
     [self.navigationController pushViewController:imgviewer animated:YES];
+}
+
+- (void)updateImageatIndex:(NSInteger)index
+{
+    if (![[self.imagesArray objectAtIndex:index] isKindOfClass:[UIImage class]]) {
+        [self.imgView setImageWithURLAF:[NSURL URLWithString:[self.product.detailsImages objectAtIndex:index]] placeholderImage:[UIImage imageNamed:kPlaceholderimage]];
+    }
+    else self.imgView.image = [self.imagesArray objectAtIndex:index];
 }
 
 #pragma mark WebServiceManager delegate methods
@@ -276,6 +294,7 @@
         if (!response.errorInResponse) {
             NSLog(@"%@",response.responseData);
             NSDictionary *dict = [NSDictionary dictionaryWithDictionary:[response.responseData objectForKey:@"product"]];
+            [self initializeImageArray];
             self.product = [self.product copyFromProduct:[[Product alloc]initWithData:dict]];
             [self.table reloadData];
             [Helper showAnimationOnView:self.table withDuration:0.2];

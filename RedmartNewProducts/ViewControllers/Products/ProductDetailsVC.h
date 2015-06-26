@@ -14,7 +14,8 @@
 
 @property (strong, nonatomic) Product *product;
 @property (weak, nonatomic) IBOutlet UITableView *table;
-@property (weak, nonatomic) UIImageView *imgView;
-
+@property (strong, nonatomic) UIImageView *imgView;
+@property (strong, nonatomic) UIImage *thumbnailImage;
+@property (strong, nonatomic) NSMutableArray *imagesArray;
 
 @end

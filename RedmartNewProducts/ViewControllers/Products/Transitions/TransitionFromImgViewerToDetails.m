@@ -9,6 +9,7 @@
 #import "TransitionFromImgViewerToDetails.h"
 #import "ImageViewer.h"
 #import "ProductDetailsVC.h"
+#import "Constants.h"
 
 @implementation TransitionFromImgViewerToDetails
 
@@ -38,7 +39,7 @@
         fromViewController.view.alpha = 0.0;
         
         // Move the image view
-        imageSnapshot.frame = [containerView convertRect:toViewController.imgView.frame fromView:toViewController.imgView.superview];
+        imageSnapshot.frame = [containerView convertRect:toViewController.imgView.frame fromView:toViewController.view];
     } completion:^(BOOL finished) {
         // Clean up
         [imageSnapshot removeFromSuperview];

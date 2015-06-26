@@ -20,7 +20,7 @@
 
     UIView *containerView = [transitionContext containerView];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
-
+    fromViewController.imgView.image = [fromViewController.imagesArray objectAtIndex:0];
     // Get a snapshot of the image view
     UIView *imageSnapshot = [fromViewController.imgView snapshotViewAfterScreenUpdates:NO];
     imageSnapshot.frame = [containerView convertRect:fromViewController.imgView.frame fromView:fromViewController.table.superview];
