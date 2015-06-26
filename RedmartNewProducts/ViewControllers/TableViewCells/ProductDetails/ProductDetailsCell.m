@@ -11,6 +11,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "ImageViewer.h"
 
+
 @implementation ProductDetailsCell
 
 - (void)awakeFromNib {
@@ -66,6 +67,9 @@
     img.contentMode = UIViewContentModeScaleAspectFit;
     img.center = vwCarousel.center;
     [vwCarousel addSubview:img];
+    if (index == 0) {
+        self.superVC.imgView = img;
+    }
     
     return vwCarousel;
 }

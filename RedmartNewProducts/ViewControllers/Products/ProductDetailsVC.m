@@ -14,7 +14,7 @@
 #import "ProductDetailsCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "ProductsCatalogueVC.h"
-#import "DSLTransitionFromSecondToFirst.h"
+#import "TransitionFromDetailstoList.h"
 
 @interface ProductDetailsVC ()<UINavigationControllerDelegate>
 {
@@ -33,7 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.dataFromCatalogue = self.product;
     [self setUpInterface];
     [self getDisplayInfo];
 }
@@ -264,7 +263,7 @@
         if (!response.errorInResponse) {
             NSLog(@"%@",response.responseData);
             NSDictionary *dict = [NSDictionary dictionaryWithDictionary:[response.responseData objectForKey:@"product"]];
-            self.product = [[Product alloc]initWithData:dict];
+            self.product = [self.product copyFromProduct:[[Product alloc]initWithData:dict]];
             [self.table reloadData];
             [Helper showAnimationOnView:self.table withDuration:0.2];
         }
@@ -292,7 +291,7 @@
                                                  toViewController:(UIViewController *)toVC {
     // Check if we're transitioning from this view controller to a DSLFirstViewController
     if (fromVC == self && [toVC isKindOfClass:[ProductsCatalogueVC class]]) {
-        return [[DSLTransitionFromSecondToFirst alloc] init];
+        return [[TransitionFromDetailstoList alloc] init];
     }
     else {
         return nil;
@@ -302,7 +301,7 @@
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
     // Check if this is for our custom transition
-    if ([animationController isKindOfClass:[DSLTransitionFromSecondToFirst class]]) {
+    if ([animationController isKindOfClass:[TransitionFromDetailstoList class]]) {
         return self.interactivePopTransition;
     }
     else {

@@ -11,7 +11,7 @@
 #import "ProductDetailsVC.h"
 #import "UIImageView+AFNetworking.h"
 #import "Product.h"
-#import "DSLTransitionFromFirstToSecond.h"
+#import "TransitionFromListToDetails.h"
 
 @interface ProductsCatalogueVC ()<UICollectionViewDelegateFlowLayout,UINavigationControllerDelegate>
 {
@@ -39,30 +39,25 @@
     [self setUpInterface];
     nextPageToBeloaded = 0;
     [self getDisplayInfo];
+    self.cvProducts.hidden = YES;
+    [self performSelector:@selector(animateVisibleCells) withObject:nil afterDelay:0.4];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-   
     self.title = @"New";
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    if ([self.items count] == 0) {
-        self.lblPlaceholder.hidden = NO;
-        [Helper showAnimationOnView:self.lblPlaceholder withDuration:0.4];
-    }
-    else self.lblPlaceholder.hidden = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(contentSizeCategoryChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
-    self.cvProducts.hidden = YES;
+    
     self.navigationController.delegate = self;
-    [self animateVisibleCells];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -325,7 +320,7 @@
                                                  toViewController:(UIViewController *)toVC {
     // Check if we're transitioning from this view controller to a DSLSecondViewController
     if (fromVC == self && [toVC isKindOfClass:[ProductDetailsVC class]]) {
-        return [[DSLTransitionFromFirstToSecond alloc] init];
+        return [[TransitionFromListToDetails alloc] init];
     }
     else {
         return nil;

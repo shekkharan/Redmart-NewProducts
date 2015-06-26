@@ -12,8 +12,8 @@
 
 @interface ProductDetailsVC : BaseVC
 
-@property (strong, nonatomic) Product *dataFromCatalogue;
 @property (strong, nonatomic) Product *product;
 @property (weak, nonatomic) IBOutlet UITableView *table;
+@property (weak, nonatomic) UIImageView *imgView;
 
 @end

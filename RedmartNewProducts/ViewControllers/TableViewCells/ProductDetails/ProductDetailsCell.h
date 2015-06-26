@@ -10,6 +10,7 @@
 #import "PageControl.h"
 #import "iCarousel.h"
 #import "Product.h"
+#import "ProductDetailsVC.h"
 
 @interface ProductDetailsCell : UITableViewCell<iCarouselDataSource,iCarouselDelegate,PageControlDelegate>
 
@@ -23,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblPromoPrice;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblOverLay;
-@property (weak, nonatomic) UIViewController *superVC;
+@property (weak, nonatomic) ProductDetailsVC *superVC;
 
 + (ProductDetailsCell *)loadCarouselCell;
 + (ProductDetailsCell *)loadProductDetailsCell;

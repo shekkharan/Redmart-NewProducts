@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Dative Studios. All rights reserved.
 //
 
-#import "DSLTransitionFromSecondToFirst.h"
+#import "TransitionFromDetailstoList.h"
 
 #import "ProductsCatalogueVC.h"
 #import "ProductDetailsVC.h"
 #import "CatalogueCell.h"
 
-@implementation DSLTransitionFromSecondToFirst
+@implementation TransitionFromDetailstoList
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     ProductDetailsVC *fromViewController = (ProductDetailsVC*)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -22,12 +22,12 @@
     NSTimeInterval duration = [self transitionDuration:transitionContext];
 
     // Get a snapshot of the image view
-    UIView *imageSnapshot = [fromViewController.table snapshotViewAfterScreenUpdates:NO];
-    imageSnapshot.frame = [containerView convertRect:fromViewController.table.frame fromView:fromViewController.table.superview];
+    UIView *imageSnapshot = [fromViewController.imgView snapshotViewAfterScreenUpdates:NO];
+    imageSnapshot.frame = [containerView convertRect:fromViewController.imgView.frame fromView:fromViewController.table.superview];
     fromViewController.table.hidden = YES;
 
     // Get the cell we'll animate to
-    CatalogueCell *cell = [toViewController collectionViewCellForProduct:fromViewController.dataFromCatalogue];
+    CatalogueCell *cell = [toViewController collectionViewCellForProduct:fromViewController.product];
     cell.imgItem.hidden = YES;
 
     // Setup the initial view states

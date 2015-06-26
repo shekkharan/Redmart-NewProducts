@@ -84,4 +84,22 @@
     [encoder encodeInt:self.isOnSale forKey:@"sale"];
 }
 
+- (Product *)copyFromProduct:(Product *)copyFrom
+{
+    self.productID = copyFrom.productID;
+    self.name = copyFrom.name;
+    self.imageURL = copyFrom.imageURL;
+    self.detailsImages = copyFrom.detailsImages;
+    self.price = copyFrom.price;
+    self.promoPrice = copyFrom.promoPrice;
+    self.desc = copyFrom.desc;
+    self.quantity = copyFrom.quantity;
+    self.promoText = copyFrom.promoText;
+    self.savingsText = copyFrom.savingsText;
+    self.isNew = copyFrom.isNew;
+    self.isInStock = copyFrom.isInStock;
+    self.isOnSale = copyFrom.isOnSale;
+    return self;
+}
+
 @end

@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Dative Studios. All rights reserved.
 //
 
-#import "DSLTransitionFromFirstToSecond.h"
+#import "TransitionFromListToDetails.h"
 
 #import "ProductsCatalogueVC.h"
 #import "ProductDetailsVC.h"
 #import "CatalogueCell.h"
 
 
-@implementation DSLTransitionFromFirstToSecond
+@implementation TransitionFromListToDetails
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     ProductsCatalogueVC *fromViewController = (ProductsCatalogueVC*)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];

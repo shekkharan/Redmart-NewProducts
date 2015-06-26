@@ -31,6 +31,7 @@ typedef enum
 @property (assign, nonatomic) YesNo isOnSale;
 
 - (id)initWithData:(NSDictionary *)data;
+- (Product *)copyFromProduct:(Product *)copyFrom;
 
 @end
 

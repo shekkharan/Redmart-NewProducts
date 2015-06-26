@@ -201,8 +201,8 @@
 		84AE2FC61B3BF36900729E42 /* OCProtocolMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FAE1B3BF36900729E42 /* OCProtocolMockObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		84AE2FC81B3C021B00729E42 /* RedmartUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FC71B3C021B00729E42 /* RedmartUITest.m */; };
 		84AE2FCC1B3C0C1500729E42 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FCB1B3C0C1500729E42 /* Product.m */; };
-		84AE2FDA1B3D030200729E42 /* DSLTransitionFromFirstToSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FD71B3D030200729E42 /* DSLTransitionFromFirstToSecond.m */; };
-		84AE2FDB1B3D030200729E42 /* DSLTransitionFromSecondToFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FD91B3D030200729E42 /* DSLTransitionFromSecondToFirst.m */; };
+		84AE2FDA1B3D030200729E42 /* TransitionFromListToDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FD71B3D030200729E42 /* TransitionFromListToDetails.m */; };
+		84AE2FDB1B3D030200729E42 /* TransitionFromDetailstoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FD91B3D030200729E42 /* TransitionFromDetailstoList.m */; };
 		D30795BA1B3B244A00B6D774 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */; };
 		D30795BD1B3B490E00B6D774 /* CatalogueCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795BC1B3B490E00B6D774 /* CatalogueCellLayout.m */; };
 /* End PBXBuildFile section */
@@ -583,10 +583,10 @@
 		84AE2FC71B3C021B00729E42 /* RedmartUITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedmartUITest.m; sourceTree = "<group>"; };
 		84AE2FCA1B3C0C1500729E42 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		84AE2FCB1B3C0C1500729E42 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
-		84AE2FD61B3D030200729E42 /* DSLTransitionFromFirstToSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLTransitionFromFirstToSecond.h; sourceTree = "<group>"; };
-		84AE2FD71B3D030200729E42 /* DSLTransitionFromFirstToSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLTransitionFromFirstToSecond.m; sourceTree = "<group>"; };
-		84AE2FD81B3D030200729E42 /* DSLTransitionFromSecondToFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSLTransitionFromSecondToFirst.h; sourceTree = "<group>"; };
-		84AE2FD91B3D030200729E42 /* DSLTransitionFromSecondToFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSLTransitionFromSecondToFirst.m; sourceTree = "<group>"; };
+		84AE2FD61B3D030200729E42 /* TransitionFromListToDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromListToDetails.h; sourceTree = "<group>"; };
+		84AE2FD71B3D030200729E42 /* TransitionFromListToDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromListToDetails.m; sourceTree = "<group>"; };
+		84AE2FD81B3D030200729E42 /* TransitionFromDetailstoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromDetailstoList.h; sourceTree = "<group>"; };
+		84AE2FD91B3D030200729E42 /* TransitionFromDetailstoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromDetailstoList.m; sourceTree = "<group>"; };
 		D30795B81B3B244A00B6D774 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
 		D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpringFlowLayout.m; sourceTree = "<group>"; };
 		D30795BB1B3B490E00B6D774 /* CatalogueCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogueCellLayout.h; sourceTree = "<group>"; };
@@ -1631,10 +1631,10 @@
 		84AE2FD51B3D030200729E42 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				84AE2FD61B3D030200729E42 /* DSLTransitionFromFirstToSecond.h */,
-				84AE2FD71B3D030200729E42 /* DSLTransitionFromFirstToSecond.m */,
-				84AE2FD81B3D030200729E42 /* DSLTransitionFromSecondToFirst.h */,
-				84AE2FD91B3D030200729E42 /* DSLTransitionFromSecondToFirst.m */,
+				84AE2FD61B3D030200729E42 /* TransitionFromListToDetails.h */,
+				84AE2FD71B3D030200729E42 /* TransitionFromListToDetails.m */,
+				84AE2FD81B3D030200729E42 /* TransitionFromDetailstoList.h */,
+				84AE2FD91B3D030200729E42 /* TransitionFromDetailstoList.m */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -1829,7 +1829,7 @@
 				849694DD1B3A6C35009A1E04 /* EFCircularSlider.m in Sources */,
 				8496952F1B3A6C35009A1E04 /* UIButton+AFNetworking.m in Sources */,
 				849696941B3A9FDC009A1E04 /* ImageViewer.m in Sources */,
-				84AE2FDA1B3D030200729E42 /* DSLTransitionFromFirstToSecond.m in Sources */,
+				84AE2FDA1B3D030200729E42 /* TransitionFromListToDetails.m in Sources */,
 				849694DE1B3A6C35009A1E04 /* EFCircularTrig.m in Sources */,
 				8496950C1B3A6C35009A1E04 /* MKAnnotationView+WebCache.m in Sources */,
 				8496952D1B3A6C35009A1E04 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -1851,7 +1851,7 @@
 				849694F81B3A6C35009A1E04 /* IQToolbar.m in Sources */,
 				849695271B3A6C35009A1E04 /* SWTableViewCell.m in Sources */,
 				8496961F1B3A8F75009A1E04 /* UILabel+DynamicResize.m in Sources */,
-				84AE2FDB1B3D030200729E42 /* DSLTransitionFromSecondToFirst.m in Sources */,
+				84AE2FDB1B3D030200729E42 /* TransitionFromDetailstoList.m in Sources */,
 				849694EE1B3A6C35009A1E04 /* iCarousel.m in Sources */,
 				849694CE1B3A6C35009A1E04 /* CountLabel.m in Sources */,
 				84AE2FBA1B3BF36900729E42 /* OCMIndirectReturnValueProvider.m in Sources */,

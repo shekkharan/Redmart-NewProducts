@@ -1,5 +1,5 @@
 //
-//  DSLTransitionFromFirstToSecond.h
+//  DSLTransitionFromSecondToFirst.h
 //  TransitionExample
 //
 //  Created by Pete Callaway on 21/07/2013.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DSLTransitionFromFirstToSecond : NSObject<UIViewControllerAnimatedTransitioning>
+@interface TransitionFromDetailstoList : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end
