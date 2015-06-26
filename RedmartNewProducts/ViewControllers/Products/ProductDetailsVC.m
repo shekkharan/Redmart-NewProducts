@@ -13,12 +13,15 @@
 #import "Headers.h"
 #import "ProductDetailsCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "ProductsCatalogueVC.h"
+#import "DSLTransitionFromSecondToFirst.h"
 
-@interface ProductDetailsVC ()
+@interface ProductDetailsVC ()<UINavigationControllerDelegate>
 {
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactivePopTransition;
+
 @property (strong, nonatomic) NSMutableDictionary *offscreenCells;
 
 @end
@@ -30,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.dataFromCatalogue = self.product;
     [self setUpInterface];
     [self getDisplayInfo];
 }
@@ -45,6 +49,7 @@
                                              selector:@selector(contentSizeCategoryChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
+     self.navigationController.delegate = self;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -52,6 +57,10 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
+    // Stop being the navigation controller's delegate
+    if (self.navigationController.delegate == self) {
+        self.navigationController.delegate = nil;
+    }
 }
 
 #pragma mark - Implementation
@@ -89,7 +98,10 @@
     self.table.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     self.table.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.table.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self animateOnEntry];
+    UIScreenEdgePanGestureRecognizer *popRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePopRecognizer:)];
+    popRecognizer.edges = UIRectEdgeLeft;
+    [self.view addGestureRecognizer:popRecognizer];
+    //[self animateOnEntry];
 }
 
 
@@ -271,14 +283,62 @@
         [self.navigationController popViewControllerAnimated:YES];
     }];
 }
-///*
-// #pragma mark - Navigation
-// 
-// // In a storyboard-based application, you will often want to do a little preparation before navigation
-// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-// // Get the new view controller using [segue destinationViewController].
-// // Pass the selected object to the new view controller.
-// }
-// */
+
+#pragma mark UINavigationControllerDelegate methods
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    // Check if we're transitioning from this view controller to a DSLFirstViewController
+    if (fromVC == self && [toVC isKindOfClass:[ProductsCatalogueVC class]]) {
+        return [[DSLTransitionFromSecondToFirst alloc] init];
+    }
+    else {
+        return nil;
+    }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                         interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+    // Check if this is for our custom transition
+    if ([animationController isKindOfClass:[DSLTransitionFromSecondToFirst class]]) {
+        return self.interactivePopTransition;
+    }
+    else {
+        return nil;
+    }
+}
+
+
+#pragma mark UIGestureRecognizer handlers
+
+- (void)handlePopRecognizer:(UIScreenEdgePanGestureRecognizer*)recognizer {
+    CGFloat progress = [recognizer translationInView:self.view].x / (self.view.bounds.size.width * 1.0);
+    progress = MIN(1.0, MAX(0.0, progress));
+    
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        // Create a interactive transition and pop the view controller
+        self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        // Update the interactive transition's progress
+        [self.interactivePopTransition updateInteractiveTransition:progress];
+    }
+    else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
+        // Finish or cancel the interactive transition
+        if (progress > 0.5) {
+            [self.interactivePopTransition finishInteractiveTransition];
+        }
+        else {
+            [self.interactivePopTransition cancelInteractiveTransition];
+        }
+        
+        self.interactivePopTransition = nil;
+    }
+    
+}
+
 
 @end

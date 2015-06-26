@@ -8,7 +8,12 @@
 
 #import "BaseVC.h"
 
+@class CatalogueCell;
+@class Product;
+
 @interface ProductsCatalogueVC : BaseVC
 
+- (CatalogueCell*)collectionViewCellForProduct:(Product*)product;
+@property (strong, nonatomic) IBOutlet UICollectionView *cvProducts;
 
 @end

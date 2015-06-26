@@ -11,8 +11,9 @@
 #import "ProductDetailsVC.h"
 #import "UIImageView+AFNetworking.h"
 #import "Product.h"
+#import "DSLTransitionFromFirstToSecond.h"
 
-@interface ProductsCatalogueVC ()<UICollectionViewDelegateFlowLayout>
+@interface ProductsCatalogueVC ()<UICollectionViewDelegateFlowLayout,UINavigationControllerDelegate>
 {
     BOOL lastQueryHadData;
     int nextPageToBeloaded;
@@ -20,7 +21,7 @@
 }
 
 @property (strong, nonatomic) NSMutableDictionary *offscreenCells;
-@property (strong, nonatomic) IBOutlet UICollectionView *cvProducts;
+
 @property (strong, nonatomic) NSMutableArray *items;
 @property (weak, nonatomic) IBOutlet UILabel *lblPlaceholder;
 @property (strong, nonatomic) NSString *currentPage;
@@ -45,6 +46,7 @@
     [super viewWillAppear:YES];
    
     self.title = @"New";
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -58,7 +60,9 @@
                                              selector:@selector(contentSizeCategoryChanged:)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
-      [self animateVisibleCells];
+    self.cvProducts.hidden = YES;
+    self.navigationController.delegate = self;
+    [self animateVisibleCells];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -67,6 +71,10 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
+    // Stop being the navigation controller's delegate
+    if (self.navigationController.delegate == self) {
+        self.navigationController.delegate = nil;
+    }
 }
 
 
@@ -154,6 +162,8 @@
 #pragma mark - Animation of cells
 
 - (void)animateVisibleCells {
+    self.cvProducts.hidden = NO;
+    [Helper showAnimationOnView:self.cvProducts withDuration:0.2];
     for (int i = 0; i < [self.cvProducts.visibleCells count]; i++) {
         CatalogueCell * cell = (CatalogueCell *) [self.cvProducts cellForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         if (i%2) {
@@ -306,5 +316,30 @@
         [self.navigationController popViewControllerAnimated:YES];
     }];
 }
+
+#pragma mark UINavigationControllerDelegate methods
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    // Check if we're transitioning from this view controller to a DSLSecondViewController
+    if (fromVC == self && [toVC isKindOfClass:[ProductDetailsVC class]]) {
+        return [[DSLTransitionFromFirstToSecond alloc] init];
+    }
+    else {
+        return nil;
+    }
+}
+
+- (CatalogueCell*)collectionViewCellForProduct:(Product*)product {
+    NSUInteger productIndex = [self.items indexOfObject:product];
+    if (productIndex == NSNotFound) {
+        return nil;
+    }
+    
+    return (CatalogueCell*)[self.cvProducts cellForItemAtIndexPath:[NSIndexPath indexPathForRow:productIndex inSection:0]];
+}
+
 
 @end

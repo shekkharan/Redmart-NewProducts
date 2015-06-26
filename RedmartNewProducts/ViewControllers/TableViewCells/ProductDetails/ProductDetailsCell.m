@@ -60,7 +60,7 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index
 {
     UIView *vwCarousel = [[UIView alloc]initWithFrame:carousel.frame];
-    vwCarousel.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
+    vwCarousel.backgroundColor = [UIColor clearColor];
     UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 120, 120)];
     [img setImageWithURLAF:[NSURL URLWithString:[self.product.detailsImages objectAtIndex:index]] placeholderImage:[UIImage imageNamed:kPlaceholderimage]];
     img.contentMode = UIViewContentModeScaleAspectFit;
