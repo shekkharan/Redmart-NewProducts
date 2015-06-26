@@ -81,9 +81,10 @@
 
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
-    ImageViewer *imgviewer = [[ImageViewer alloc]init];
-    imgviewer.url = [self.product.detailsImages objectAtIndex:index];
-    [self.superVC.navigationController pushViewController:imgviewer animated:NO];
+    if ([self.delegate respondsToSelector:@selector(showImageViewerWithImageURL:)]) {
+        [self.delegate showImageViewerWithImageURL:[self.product.detailsImages objectAtIndex:index]];
+    }
+   
 }
 
 - (NSUInteger)numberOfVisibleItemsInCarousel:(iCarousel *)carousel

@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (weak, nonatomic) UIImageView *imgView;
 
+
 @end

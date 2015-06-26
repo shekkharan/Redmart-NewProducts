@@ -203,6 +203,8 @@
 		84AE2FCC1B3C0C1500729E42 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FCB1B3C0C1500729E42 /* Product.m */; };
 		84AE2FDA1B3D030200729E42 /* TransitionFromListToDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FD71B3D030200729E42 /* TransitionFromListToDetails.m */; };
 		84AE2FDB1B3D030200729E42 /* TransitionFromDetailstoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FD91B3D030200729E42 /* TransitionFromDetailstoList.m */; };
+		84AE2FDE1B3D176500729E42 /* TransitionFromDetailsToImgViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FDD1B3D176500729E42 /* TransitionFromDetailsToImgViewer.m */; };
+		84AE2FE11B3D178500729E42 /* TransitionFromImgViewerToDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AE2FE01B3D178500729E42 /* TransitionFromImgViewerToDetails.m */; };
 		D30795BA1B3B244A00B6D774 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */; };
 		D30795BD1B3B490E00B6D774 /* CatalogueCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D30795BC1B3B490E00B6D774 /* CatalogueCellLayout.m */; };
 /* End PBXBuildFile section */
@@ -587,6 +589,10 @@
 		84AE2FD71B3D030200729E42 /* TransitionFromListToDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromListToDetails.m; sourceTree = "<group>"; };
 		84AE2FD81B3D030200729E42 /* TransitionFromDetailstoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromDetailstoList.h; sourceTree = "<group>"; };
 		84AE2FD91B3D030200729E42 /* TransitionFromDetailstoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromDetailstoList.m; sourceTree = "<group>"; };
+		84AE2FDC1B3D176500729E42 /* TransitionFromDetailsToImgViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromDetailsToImgViewer.h; sourceTree = "<group>"; };
+		84AE2FDD1B3D176500729E42 /* TransitionFromDetailsToImgViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromDetailsToImgViewer.m; sourceTree = "<group>"; };
+		84AE2FDF1B3D178500729E42 /* TransitionFromImgViewerToDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionFromImgViewerToDetails.h; sourceTree = "<group>"; };
+		84AE2FE01B3D178500729E42 /* TransitionFromImgViewerToDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionFromImgViewerToDetails.m; sourceTree = "<group>"; };
 		D30795B81B3B244A00B6D774 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
 		D30795B91B3B244A00B6D774 /* TLSpringFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpringFlowLayout.m; sourceTree = "<group>"; };
 		D30795BB1B3B490E00B6D774 /* CatalogueCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogueCellLayout.h; sourceTree = "<group>"; };
@@ -1635,6 +1641,10 @@
 				84AE2FD71B3D030200729E42 /* TransitionFromListToDetails.m */,
 				84AE2FD81B3D030200729E42 /* TransitionFromDetailstoList.h */,
 				84AE2FD91B3D030200729E42 /* TransitionFromDetailstoList.m */,
+				84AE2FDC1B3D176500729E42 /* TransitionFromDetailsToImgViewer.h */,
+				84AE2FDD1B3D176500729E42 /* TransitionFromDetailsToImgViewer.m */,
+				84AE2FDF1B3D178500729E42 /* TransitionFromImgViewerToDetails.h */,
+				84AE2FE01B3D178500729E42 /* TransitionFromImgViewerToDetails.m */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -1827,6 +1837,7 @@
 				849694D61B3A6C35009A1E04 /* DoActionSheet+Style.m in Sources */,
 				849695831B3A75C0009A1E04 /* Session.m in Sources */,
 				849694DD1B3A6C35009A1E04 /* EFCircularSlider.m in Sources */,
+				84AE2FDE1B3D176500729E42 /* TransitionFromDetailsToImgViewer.m in Sources */,
 				8496952F1B3A6C35009A1E04 /* UIButton+AFNetworking.m in Sources */,
 				849696941B3A9FDC009A1E04 /* ImageViewer.m in Sources */,
 				84AE2FDA1B3D030200729E42 /* TransitionFromListToDetails.m in Sources */,
@@ -1848,6 +1859,7 @@
 				849696231B3A8F75009A1E04 /* UIView+Border.m in Sources */,
 				849694C31B3A6C35009A1E04 /* AFURLResponseSerialization.m in Sources */,
 				8496952A1B3A6C35009A1E04 /* TableViewWithEmptyView.m in Sources */,
+				84AE2FE11B3D178500729E42 /* TransitionFromImgViewerToDetails.m in Sources */,
 				849694F81B3A6C35009A1E04 /* IQToolbar.m in Sources */,
 				849695271B3A6C35009A1E04 /* SWTableViewCell.m in Sources */,
 				8496961F1B3A8F75009A1E04 /* UILabel+DynamicResize.m in Sources */,

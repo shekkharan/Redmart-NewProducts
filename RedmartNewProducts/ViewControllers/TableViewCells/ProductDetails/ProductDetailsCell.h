@@ -12,6 +12,12 @@
 #import "Product.h"
 #import "ProductDetailsVC.h"
 
+@protocol ProductDetailsCellDelegate <NSObject>
+
+- (void)showImageViewerWithImageURL:(NSString *)url;
+
+@end
+
 @interface ProductDetailsCell : UITableViewCell<iCarouselDataSource,iCarouselDelegate,PageControlDelegate>
 
 @property (weak, nonatomic)Product *product;
@@ -25,6 +31,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblOverLay;
 @property (weak, nonatomic) ProductDetailsVC *superVC;
+@property (weak, nonatomic) id <ProductDetailsCellDelegate>delegate;
 
 + (ProductDetailsCell *)loadCarouselCell;
 + (ProductDetailsCell *)loadProductDetailsCell;

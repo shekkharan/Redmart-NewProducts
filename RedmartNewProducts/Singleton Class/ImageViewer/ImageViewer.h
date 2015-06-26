@@ -14,8 +14,9 @@
 #define MAIN_LABEL_Y_ORIGIN 0
 #define IMAGEVIEW_Y_ORIGIN 15
 
-@interface ImageViewer : UIViewController
+@interface ImageViewer : UIViewController<UINavigationControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgImageViewer;
 @property (readwrite, nonatomic) int yOrigin;
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *url;

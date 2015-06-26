@@ -15,8 +15,9 @@
 #import "UIImageView+AFNetworking.h"
 #import "ProductsCatalogueVC.h"
 #import "TransitionFromDetailstoList.h"
+#import "TransitionFromDetailsToImgViewer.h"
 
-@interface ProductDetailsVC ()<UINavigationControllerDelegate>
+@interface ProductDetailsVC ()<UINavigationControllerDelegate,ProductDetailsCellDelegate>
 {
 }
 
@@ -57,9 +58,9 @@
                                                     name:UIContentSizeCategoryDidChangeNotification
                                                   object:nil];
     // Stop being the navigation controller's delegate
-    if (self.navigationController.delegate == self) {
-        self.navigationController.delegate = nil;
-    }
+//    if (self.navigationController.delegate == self) {
+//        self.navigationController.delegate = nil;
+//    }
 }
 
 #pragma mark - Implementation
@@ -193,6 +194,7 @@
             if (!cell)
             {
                 cell = [ProductDetailsCell loadCarouselCell];
+                cell.delegate = self;
                 cell.product = self.product;
                 cell.pcImages.numberOfPages = [self.product.detailsImages count];
                 if ([self.product.detailsImages count] < 2) {
@@ -256,6 +258,17 @@
 
 #pragma mark WebServiceManager delegate methods
 
+- (void)showImageViewerWithImageURL:(NSString *)url
+{
+    ImageViewer *imgviewer = [[ImageViewer alloc]init];
+    imgviewer.url = url;
+    imgviewer.yOrigin = self.imgView.frame.origin.y;
+    self.navigationController.delegate = self;
+    [self.navigationController pushViewController:imgviewer animated:YES];
+}
+
+#pragma mark WebServiceManager delegate methods
+
 - (void)processCompleted:(WebServiceResponse *)response
 {
     if (response.webserviceCall == kGETPRODUCTDETAILS)
@@ -293,10 +306,14 @@
     if (fromVC == self && [toVC isKindOfClass:[ProductsCatalogueVC class]]) {
         return [[TransitionFromDetailstoList alloc] init];
     }
+    if (fromVC == self && [toVC isKindOfClass:[ImageViewer class]]) {
+        return [[TransitionFromDetailsToImgViewer alloc] init];
+    }
     else {
         return nil;
     }
 }
+
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
