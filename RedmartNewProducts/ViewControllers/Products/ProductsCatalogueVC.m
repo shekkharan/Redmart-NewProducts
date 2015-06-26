@@ -144,7 +144,7 @@
     CGFloat bottomInset = scrollView.contentInset.bottom;
     CGFloat bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height - bottomInset;
     NSLog(@"%f",scrollView.contentSize.height);
-    if (bottomEdge == scrollView.contentSize.height || ([self.cvProducts.visibleCells count] < 4)) {
+    if (bottomEdge == scrollView.contentSize.height) {
         [UpdateHUD addMBProgress:self.view withText:@"Loading.."];
         if (lastQueryHadData) {
             [self getProductsCatalogue:[self getListQueryParameters]];
