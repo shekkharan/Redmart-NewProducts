@@ -129,7 +129,6 @@
     _sizingCell = [[[UINib nibWithNibName:@"CatalogueCell" bundle:nil]instantiateWithOwner:nil options:nil] objectAtIndex:0];
     
     [self.cvProducts selectItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
-    //[self prepareVisibleCellsForAnimation];
 }
 
 - (void)getProductsCatalogue:(ListQueryParameters *)parameters
