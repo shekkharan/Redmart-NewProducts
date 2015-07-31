@@ -24,7 +24,7 @@
     [mFlowManager checkFirstLaunch];
     [mFlowManager launchApp];
     [self setupNavigationBar];
-    //@""
+    //@""Hi
     return YES;
 }
 
